@@ -44,6 +44,8 @@ const lightUp = (words) => {
   letterElements.forEach((letterElement, i) => {
     if (indicesToLight.includes(i)) {
       letterElement.classList.add('active');
+    } else {
+      letterElement.classList.remove('active');
     }
   });
 }
@@ -85,4 +87,4 @@ const updateClock = () => {
 }
 
 updateClock();
-setInterval(updateClock, 150_000);
+setInterval(updateClock, 1000);
