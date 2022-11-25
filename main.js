@@ -4,7 +4,9 @@ const letters = 'itlisasampmacquarterdctwentyfivexhalfstenftopasterunineonesixth
 letters.forEach(letter => {
   const letterElement = document.createElement('div');
   letterElement.classList.add('letter');
-  letterElement.textContent = letter;
+  const letterContainer = document.createElement('span');
+  letterContainer.textContent = letter;
+  letterElement.appendChild(letterContainer);
   grid.appendChild(letterElement);
 });
 
@@ -70,7 +72,7 @@ const formatDate = (date) => {
     const currentSteps = steps[step];
 
     const standardTime = currentSteps.includes('to') ? hours + 1 : hours;
-    currentSteps.push((standardTime % 12).toString());
+    currentSteps.push((standardTime % 12 === 0 ? 12 : standardTime % 12).toString());
     currentSteps.push('it', 'is');
     // currentSteps.push(hours > 12 ? 'pm': 'am');
 
