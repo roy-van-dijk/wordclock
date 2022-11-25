@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Source Code Pro Black";
+  src: url('SourceCodePro-Black.otf');
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +10,7 @@
 }
 
 body {
-  font-family: monospace;
+  font-family: "Source Code Pro Black", "Consolas", "Courier New", monospace;
   background-color: black;
   height: 100vh;
   width: 100vw;
