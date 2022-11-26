@@ -61,7 +61,7 @@ const formatDate = (date) => {
         3:  ['prefixQuarter', 'a', 'past'],
         4:  ['prefixTwenty', 'past'],
         5:  ['prefixTwenty', 'prefixFive', 'past'],
-        6:  ['half', 'past'],
+        6:  ['prefixHalf', 'past'],
         7:  ['prefixTwenty', 'prefixFive', 'to'],
         8:  ['prefixTwenty', 'to'],
         9:  ['prefixQuarter', 'a', 'to'],
