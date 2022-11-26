@@ -49,10 +49,11 @@ body {
 }
 
 .letter {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.1);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: color 0.3s;
 }
 
 .letter.active {

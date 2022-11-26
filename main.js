@@ -73,8 +73,8 @@ const formatDate = (date) => {
     const step = Math.round(minutes / 5);
     const currentSteps = steps[step];
 
-    const standardTime = currentSteps.includes('to') ? hours + 1 : hours;
-    currentSteps.push((standardTime % 12 === 0 ? 12 : standardTime % 12).toString());
+    const standardTime = currentSteps.includes("to") || hours === 0 ? hours + 1 : hours;
+    currentSteps.push(standardTime % 12 === 0 ? 12 : standardTime % 12);
     currentSteps.push('it', 'is');
     // currentSteps.push(hours > 12 ? 'pm': 'am');
 
