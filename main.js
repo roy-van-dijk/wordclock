@@ -70,13 +70,15 @@ const formatDate = (date) => {
         12: ['oclock'],
     }
 
+    const stepsLength = Object.keys(steps).length;
+    const needsNextHour = (step) => step > stepsLength / 2; 
+
     const step = Math.round(minutes / 5);
     const currentSteps = steps[step];
 
-    const standardTime = currentSteps.includes("to") || hours === 0 ? hours + 1 : hours;
+    const standardTime = needsNextHour(step) ? hours + 1 : hours;
     currentSteps.push(standardTime % 12 === 0 ? 12 : standardTime % 12);
     currentSteps.push('it', 'is');
-    // currentSteps.push(hours > 12 ? 'pm': 'am');
 
     return currentSteps;
 }
